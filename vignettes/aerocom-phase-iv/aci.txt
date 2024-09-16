@@ -75,7 +75,8 @@ Wang, M., S. Ghan, X. Liu, T. L’Ecuyer, K. Zhang, H. Morrison, M. Ovchinnikov,
 
 5 years (years 2006-2010) of 3-hourly instantaneous data from the PD run
 ======
-^ name 	^ long_name (CF if possible) ^	units ^	description ^
+| name | long_name (CF if possible) | units | description |
+| ---- |  ---- |  ---- |  ---- |
 | od550aer  | atmosphere_optical_thickness_due_to_aerosol | 1 | Aerosol optical depth (@ 550 nm) |
 | angstrm | AOD_Angstrom_exponent | 1 | |
 | aerindex |aerosol_index  | 1  | od550aer*angstrm |
