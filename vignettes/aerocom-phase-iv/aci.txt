@@ -186,12 +186,6 @@ Optional, but highly desirable for models with COSP
 | clhcalipso | cloud_area_fraction_in_atmosphere_layer | % | CALIPSO High Level Cloud Fraction  | | |
 
 
-
-==Sampling of cloud-top quantities==
-
-The idea is to use the cloud overlap assumption (maximum, random, or maximum-random) to estimate which part of the cloud in a  \\ layer can be seen from above.
-
-Note: For the CCN, whether to sample it in the same way as CDNC, or use a similar approach (going from bottom up)  \\  
 <!-- (b) 3D -->
 
 <!-- | name | long_name (CF if possible) |	units |	description | comment | notes | -->
@@ -217,25 +211,31 @@ Note: For the CCN, whether to sample it in the same way as CDNC, or use a simila
 <!-- | cfadDbze94 | histogram_of_equivalent_reflectivity_factor_over_height_above_reference_ellipsoid | 1 | CloudSat Radar Reflectivity CFAD | CFADs (Cloud Frequency Altitude Diagrams) are joint height - radar reflectivity  distributions. | 40 levels x 15 bins | -->
 <!-- | cfadLidarsr532 | histogram_of_backscattering_ratio_over_height_above_reference_ellipsoid | 1 | CALIPSO Scattering Ratio CFAD | CFADs (Cloud Frequency Altitude Diagrams) are joint height - lidar scattering ratio distributions. | 40 levels x 15 bins | -->
 
+## Sampling of cloud-top quantities ## 
+
+The idea is to use the cloud overlap assumption (maximum, random, or maximum-random) to estimate which part of the cloud in a   layer can be seen from above.
+
+Note: For the CCN, whether to sample it in the same way as CDNC, or use a similar approach (going from bottom up)    
 to sample it at cloud base depends on your parameterization of the activation.
 
-    let i=1,2,...,nx be the index for the horizontal grid-points
-    let k=1,2,...,nz be the index for the vertial levels, with 1 being the uppermost level, and nz the surface level 
+let i=1,2,...,nx be the index for the horizontal grid-points
+let k=1,2,...,nz be the index for the vertial levels, with 1 being the uppermost
+level, and nz the surface level 
 
-naming convention for the 3D input fields:
+### Naming convention for the 3D input fields: ### 
 
-iovl is the flag to select the overlap hypothesis
-cod3d(nx,nz) cloud optical thickness
-f3d(nx,nz) cloud fraction
-t3d(nx,nz) temperature
+iovl is the flag to select the overlap hypothesis\
+cod3d(nx,nz) cloud optical thickness\
+f3d(nx,nz) cloud fraction\
+t3d(nx,nz) temperature\
 phase3d(nx,nz) cloud thermodynamic phase (0: entire cloud consists of ice, 
-1: entire cloud consists of liquid water, between 0 and 1: mixed-phase)
-phase3d could be from fice3d/f3d where fice3d=ice+mixed phase cloud fraction
-cdr3d(nx,nz) in-cloud  droplet effective radius
-icr3d(nx,nz) in-cloud ice crystal effective radius
-cdnc3d(nx,nz) in-cloud droplet number concentration 
+1: entire cloud consists of liquid water, between 0 and 1: mixed-phase)\
+phase3d could be from fice3d/f3d where fice3d=ice+mixed phase cloud fraction\
+cdr3d(nx,nz) in-cloud  droplet effective radius\
+icr3d(nx,nz) in-cloud ice crystal effective radius\
+cdnc3d(nx,nz) in-cloud droplet number concentration\ 
 
-
+### "Cloud-top" calculation ### 
 ``` fortran
 thres_cld = 0.001  
 thres_cod = 0.3  
@@ -292,11 +292,11 @@ DO i=1,nx
 ENDDO ! loop over I
 ```
 
-naming convention for the input variables:
+<!-- naming convention for the input variables: -->
 
-    utctime current time of the day in UTC in seconds  
-    time_step_len length of model time-step  
-    lon(nx) longitude in degrees from 0 to 360   
+<!--     utctime current time of the day in UTC in seconds   -->
+<!--     time_step_len length of model time-step   -->
+<!--     lon(nx) longitude in degrees from 0 to 360    -->
 
  ==== Q/A ====
 
