@@ -8,9 +8,9 @@ Repository: aerocom-users:/metno/aerocom/work/aerocom1/INDIRECT3
 
 ======
 
-== Data submission deadline ==
+## Data submission deadline ##
 
- *   Submission of results by 1 December 2013 
+**TBD at Lille workshop** 
 
 == Simulation setup ==
 
