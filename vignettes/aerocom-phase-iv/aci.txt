@@ -79,12 +79,12 @@ Wang, M., S. Ghan, X. Liu, T. L’Ecuyer, K. Zhang, H. Morrison, M. Ovchinnikov,
  *  CFMIP COSP diagnostics provided by COSP do not need to be run through cmor because the names are the same, 
       but please separate files for each variable
 
-(1) 2D diagnostics for evaluation with satellite data
 <!-- In addition to the diagnostics below, it is highly recommended to store the AEROCOM standard and forcing diagnostics, so that the simulations can be analysed for the direct forcing as well, and future more in-depth analyses are possible.  -->
 
+### 5 years of 2D diagnostics (3-hourly instantaneous) ### 
 
-5 years (years 2006-2010) of 3-hourly instantaneous data from the PD run
-======
+For evaluation with satellite data and for ERFaci decomposition (Gryspeerdt et al. 2020)
+
 | name | long_name (CF if possible) | units | description |
 | ---- |  ---- |  ---- |  ---- |
 | od550aer  | atmosphere_optical_thickness_due_to_aerosol | 1 | Aerosol optical depth (@ 550 nm) |
@@ -125,11 +125,13 @@ Wang, M., S. Ghan, X. Liu, T. L’Ecuyer, K. Zhang, H. Morrison, M. Ovchinnikov,
 | autoconv | column_autoconversion_rate | kg m-2 s-1	| grid cell mean column total |
 | accretn | column_accretion_rate	| kg m-2 s-1	| grid cell mean column total |
 
-=====
+### Monthly-mean fields ###
 
-(2) For forcing estimates: as in (1), but monthly-mean fields for both PD and PI simulations, plus a land-ocean mask (0 land, 1 ocean).
+As above, plus a land-ocean mask (0 land, 1 ocean).
 
-(3) 3D monthly mean diagnostics
+### 3D monthly mean diagnostics ###
+
+*TBD* whether these are actually needed
 
 | name | long_name (CF if possible) | units | description | comment | notes | 
 | ---- | ---- | ---- | ---- | ---- | ---- |
@@ -165,9 +167,9 @@ Wang, M., S. Ghan, X. Liu, T. L’Ecuyer, K. Zhang, H. Morrison, M. Ovchinnikov,
 | mp_hetnuc      | droplet_freezing_rate_by_heterogeneous           | m-3 s-1    | grid cell mean freezing rate of cloud droplets in mixed-phase clouds for T>-37C                                                                                                                                                                              |   |      |      |      |      |   |
 | mp_homnuc      | droplet_freezing_rate_by_homogeneous             | m-3 s-1    | grid cell mean instantaneous freezing rate of cloud droplets for T<=-37C                                                                                                                                                                                     |   |      |      |      |      |   |
 
-(4) Optional CFMIP COSP diagnostics. Highly desirable for models with COSP \\ 
-3-hr snapshots and daily means for January-March 2008 PD simulation only.\\
-(a) 2D
+### CFMIP COSP 2D diagnostics (3-hourly instantaneous) ### 
+
+Optional, but highly desirable for models with COSP
 
 | name | long_name (CF if possible) |	units |	description | comment | notes |
 | ---- | ---- | ---- | ---- | ---- | ---- |
