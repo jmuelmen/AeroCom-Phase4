@@ -63,28 +63,25 @@ Kooperman, G. J., M. S. Pritchard, S. J. Ghan, R. C. J. Sommerville, and L. M. R
 Wang, M., S. Ghan, X. Liu, T. L’Ecuyer, K. Zhang, H. Morrison, M. Ovchinnikov, R. Easter, R. Marchand, D. Chand, Y. Qian, and J. E. Penner, 2012: Strong constraints on cloud lifetime effects of aerosol using satellite observations. Geophys. Res. Lett., 39, 15, doi:10.1029/2012GL052204.
 
     
-=== Diagnostics ===
+## Diagnostics ##
 
- *   All data except COSP diagnostics is to be collected at the AEROCOM server. \\ 
- *   Groups hold COSP diagnostics and contact Kenta Suzuki (Kentaro.Suzuki@jpl.nasa.gov) for analysis  \\
- *   follow the aerocom data protocol (http://aerocom.met.no/protocol.html) \\ 
- *   Data in NetCDF format, one variable and year per file with CMOR variable names \\ 
- *   All data are 3-dimensional ( lon x lat x time )  \\ 
- *   filenames aerocom_<ModelName>_<ExperimentName>_<VariableName>_<VerticalCoordinateType>_<Period>_<Frequency>.nc \\
-    where <ModelName> can be chosen such that Model Name, Model version and possibly the institution can be identified. No underscores (_) are allowed in <ModelName>. Use (-) instead. Max 20 characters. 
-    <ExperimentName> = all_2000, all_1850, hom_2000, hom_1850, fix_2000, or fix_1850 
-    <VariableName> see list below 
-    <VerticalCoordinateType> => "Surface", "TOA", "Column", "ModelLevel" 
-    <Period> => "2008", "2010", ...  
-    <Frequency> => "timeinvariant","hourly", ,"3hourly", "daily", "monthly" 
-
- *  CFMIP COSP diagnostics provided by COSP do not need to be run through cmor because the names are the same, \\
- *     but please separate files for each variable
-
-    In addition to the diagnostics below, it is highly recommended to store the AEROCOM standard and forcing diagnostics, 
-    so that the simulations can be analysed for the direct forcing as well, and future more in-depth analyses are possible. 
+ *   All data is to be collected at the AeroCom server.
+ *   Follow the aerocom data protocol (http://aerocom.met.no/protocol.html)
+ *   Data in NetCDF format, one variable and year per file with CMOR variable names
+ *   All data are 3-dimensional ``( lon x lat x time )``
+ *   Filename format is ``aerocom_<ModelName>_<ExperimentName>_<VariableName>_<VerticalCoordinateType>_<Period>_<Frequency>.nc``,\
+    where ``<ModelName>`` can be chosen such that model name, model version and possibly the institution can be identified. No underscores (``_``) are allowed in ``<ModelName>``. Use (-) instead. Max 20 characters. \
+    ``<ExperimentName>`` = ``all_2000``, ``all_1850``\
+    ``<VariableName>`` see list below \
+    ``<VerticalCoordinateType>`` => "Surface", "TOA", "Column", "ModelLevel" \
+    ``<Period>`` => "2008", "2010", ... (note at this point *period TBD*) \
+    ``<Frequency>`` => "timeinvariant","hourly", ,"3hourly", "daily", "monthly" 
+ *  CFMIP COSP diagnostics provided by COSP do not need to be run through cmor because the names are the same, 
+      but please separate files for each variable
 
 (1) 2D diagnostics for evaluation with satellite data
+<!-- In addition to the diagnostics below, it is highly recommended to store the AEROCOM standard and forcing diagnostics, so that the simulations can be analysed for the direct forcing as well, and future more in-depth analyses are possible.  -->
+
 
 5 years (years 2006-2010) of 3-hourly instantaneous data from the PD run
 ======
