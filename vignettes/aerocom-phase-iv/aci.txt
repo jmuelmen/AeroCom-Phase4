@@ -186,41 +186,37 @@ Optional, but highly desirable for models with COSP
 | clhcalipso | cloud_area_fraction_in_atmosphere_layer | % | CALIPSO High Level Cloud Fraction  | | |
 
 
-=====
-
-(b) 3D
-
-| name | long_name (CF if possible) |	units |	description | comment | notes |
-| ---- | ---- | ---- | ---- | ---- | ---- |
-| t | temperature	| K	| each layer |	
-| z | altitude          | m       | each layer |	
-| pressure | atmospheric_pressure          | Pa  | each layer |
-| airmass | atmosphere_mass_content_of_air    | kg m-2   | each layer  |
-| ccn0.1 | cloud_condensation_nuclei_0.1 | m-3	| each layer (S=0.1%) |
-| ccn0.3 | cloud_condensation_nuclei_0.3 | m-3	| each layer (S=0.3%) |
-| nc | liquid_cloud_droplet_number_concentration | m-3	| grid cell mean each layer |
-| lwc| cloud_liquid_water_content | kg m-3	| grid cell mean each layer stratiform cld only|  |
-| rel | droplet_effective_radius | m |	grid cell mean each layer stratiform cld only  |  |
-| lccl | layer_liquid_cloud_fraction | 1 | Fractional cover by liquid water stratiform clouds each layer |
-| ni | ice_cloud_crystal_number_concentration	| m-3	| grid cell mean each layer |
-| iwc | cloud_ice_water_content	| kg m-3	| grid cell mean each layer stratiform cld only|
-| rei | ice_effective_radius | m | grid cell mean each layer stratiform cld only |       	| |
-| iccl   | layer_ice_cloud_fraction  | 1 | Fractional cover by ice water stratiform clouds each layer |	|  |
-| dbze94  | 94GHz_radar_reflectivity_subcolumn | dBZe  | Radar reflectivity each model layer in 100 subcolumns   |
-| fracout | fracout_cloud_flag_subcolumn | 1 | subcolumn cloud flag each model layer in 100 subcolumns 0 clear, 1 strat 2 conv |
-| clcalipso | cloud_area_fraction_in_atmosphere_layer | % | CALIPSO Cloud Area Fraction |  | at 40 height levels |
-| clcalipso2   | cloud_area_fraction_in_atmosphere_layer | % | CALIPSO Cloud Fraction Undetected by CloudSat | Clouds detected by CALIPSO but below the detectability threshold of CloudSat | at 40 height levels |
-| cfadDbze94 | histogram_of_equivalent_reflectivity_factor_over_height_above_reference_ellipsoid | 1 | CloudSat Radar Reflectivity CFAD | CFADs (Cloud Frequency Altitude Diagrams) are joint height - radar reflectivity  distributions. | 40 levels x 15 bins |
-| cfadLidarsr532 | histogram_of_backscattering_ratio_over_height_above_reference_ellipsoid | 1 | CALIPSO Scattering Ratio CFAD | CFADs (Cloud Frequency Altitude Diagrams) are joint height - lidar scattering ratio distributions. | 40 levels x 15 bins |
-
-=====
-
 
 ==Sampling of cloud-top quantities==
 
 The idea is to use the cloud overlap assumption (maximum, random, or maximum-random) to estimate which part of the cloud in a  \\ layer can be seen from above.
 
 Note: For the CCN, whether to sample it in the same way as CDNC, or use a similar approach (going from bottom up)  \\  
+<!-- (b) 3D -->
+
+<!-- | name | long_name (CF if possible) |	units |	description | comment | notes | -->
+<!-- | ---- | ---- | ---- | ---- | ---- | ---- | -->
+<!-- | t | temperature	| K	| each layer |	 -->
+<!-- | z | altitude          | m       | each layer |	 -->
+<!-- | pressure | atmospheric_pressure          | Pa  | each layer | -->
+<!-- | airmass | atmosphere_mass_content_of_air    | kg m-2   | each layer  | -->
+<!-- | ccn0.1 | cloud_condensation_nuclei_0.1 | m-3	| each layer (S=0.1%) | -->
+<!-- | ccn0.3 | cloud_condensation_nuclei_0.3 | m-3	| each layer (S=0.3%) | -->
+<!-- | nc | liquid_cloud_droplet_number_concentration | m-3	| grid cell mean each layer | -->
+<!-- | lwc| cloud_liquid_water_content | kg m-3	| grid cell mean each layer stratiform cld only|  | -->
+<!-- | rel | droplet_effective_radius | m |	grid cell mean each layer stratiform cld only  |  | -->
+<!-- | lccl | layer_liquid_cloud_fraction | 1 | Fractional cover by liquid water stratiform clouds each layer | -->
+<!-- | ni | ice_cloud_crystal_number_concentration	| m-3	| grid cell mean each layer | -->
+<!-- | iwc | cloud_ice_water_content	| kg m-3	| grid cell mean each layer stratiform cld only| -->
+<!-- | rei | ice_effective_radius | m | grid cell mean each layer stratiform cld only |       	| | -->
+<!-- | iccl   | layer_ice_cloud_fraction  | 1 | Fractional cover by ice water stratiform clouds each layer |	|  | -->
+<!-- | dbze94  | 94GHz_radar_reflectivity_subcolumn | dBZe  | Radar reflectivity each model layer in 100 subcolumns   | -->
+<!-- | fracout | fracout_cloud_flag_subcolumn | 1 | subcolumn cloud flag each model layer in 100 subcolumns 0 clear, 1 strat 2 conv | -->
+<!-- | clcalipso | cloud_area_fraction_in_atmosphere_layer | % | CALIPSO Cloud Area Fraction |  | at 40 height levels | -->
+<!-- | clcalipso2   | cloud_area_fraction_in_atmosphere_layer | % | CALIPSO Cloud Fraction Undetected by CloudSat | Clouds detected by CALIPSO but below the detectability threshold of CloudSat | at 40 height levels | -->
+<!-- | cfadDbze94 | histogram_of_equivalent_reflectivity_factor_over_height_above_reference_ellipsoid | 1 | CloudSat Radar Reflectivity CFAD | CFADs (Cloud Frequency Altitude Diagrams) are joint height - radar reflectivity  distributions. | 40 levels x 15 bins | -->
+<!-- | cfadLidarsr532 | histogram_of_backscattering_ratio_over_height_above_reference_ellipsoid | 1 | CALIPSO Scattering Ratio CFAD | CFADs (Cloud Frequency Altitude Diagrams) are joint height - lidar scattering ratio distributions. | 40 levels x 15 bins | -->
+
 to sample it at cloud base depends on your parameterization of the activation.
 
     let i=1,2,...,nx be the index for the horizontal grid-points
