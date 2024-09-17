@@ -24,27 +24,28 @@ workshop.
 
 **TBD at Lille workshop** 
 
-== Simulation setup ==
-
- *   Simulation start 1 October 2005 \\  
- *   Forcing by AMIP2 sea surface temperature and sea-ice extent \\ 
- *   Preferred: Nudge toward ECMWF reanalysis winds (not temperature) through 2010 \\
- *   Acceptable: Nudge toward winds from one baseline simulation by your model \\
- *   Less acceptable: No nudging \\ 
- *   Greenhouse gas concentrations for year 2000 \\ 
- *   Aerosol direct, semi-direct, and indirect effects taken into account.  \\ 
-
- *   all_2000: simulation PD (present-day): year 2000 IPCC aerosol emissions \\ 
- *   all_1850: simulation PI (pre-industrial): year 1850 IPCC aerosol emissions (year 2000 GHG concentration)  \\ 
- *   hom_2000: present day emissions no heterogeneous nucleation of ice in cirrus clouds with T%%<%%-37 C\\
- *   hom_1850: as in hom_2000, but for pre-industrial emissions \\
- *   fix_2000: present day emissions fixed ice nucleation for T%%<%%-37 C using a constant ice number of 383.6 /L, which is from Cooper (1986) at T=-37C \\
- *   fix_1850: as in fix_2000, but for pre-industrial emissions  \\
-
-
 == Motivation ==
 
 The proposed study is designed to address two key areas of uncertainty: 1) the sensitivity of cloud liquid water path to aerosol, and 2) the competition between heterogeneous and homogeneous nucleation of ice crystals. 
+## Simulation setup ##
+
+* Five years nudged to winds (not temperature or humidity)
+* Preferred: Nudge toward ECMWF reanalysis winds 
+* Acceptable: Nudge toward winds from one baseline simulation by your model 
+* Simulation start year **TBD** to weigh the trade-off between satellite
+availability, recent features in the temperature and forcing time series, etc.
+Will include the overall Phase 4 baseline year.
+* all_2000: simulation PD (present-day): year 2000 IPCC aerosol emissions 
+* all_1850: simulation PI (preindustrial): year 1850 IPCC aerosol emissions (year 2000 GHG concentration, nudged to present-day winds)
+<!-- *   Forcing by AMIP2 sea surface temperature and sea-ice extent  
+ *   Greenhouse gas concentrations for year 2000  -->
+
+<!-- [comment]: # these sound like beyond-the-baseline -->
+<!-- [comment]: #  *   hom_2000: present day emissions no heterogeneous nucleation of ice in cirrus clouds with T%%<%%-37 C -->
+<!-- [comment]: #  *   hom_1850: as in hom_2000, but for pre-industrial emissions  -->
+<!-- [comment]: #  *   fix_2000: present day emissions fixed ice nucleation for T%%<%%-37 C using a constant ice number of 383.6 /L, which is from Cooper (1986) at T=-37C  -->
+<!-- [comment]: #  *   fix_1850: as in fix_2000, but for pre-industrial emissions   -->
+
 
 To address issue 1), we’ve added daily and monthly diagnostics that can be compared with CloudSat and MODIS retrievals of the relationship between the aerosol optical depth and the probability of precipitation (Wang et al., 2012). 
 
