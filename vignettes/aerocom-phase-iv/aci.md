@@ -46,7 +46,7 @@ Will include the overall Phase 4 baseline year.
 ## Motivation ##
 
 The AeroCom Phase 4 "ACI baseline" experiment design builds on the highly
-successful [Phase 2 Indirect Effect Experiment ("Indirect3")](https://foo), updated to address
+successful [Phase 2 Indirect Effect Experiment ("Indirect3")](https://wiki.met.no/aerocom/indirect), updated to address
 the new science questions that have emerged since (and, in many cases, as a
 result of) Indirect3.  We have aimed to retain what made Indirect3 great, moved
 the technically more challenging aspects into "beyond-the-baseline" experiments
