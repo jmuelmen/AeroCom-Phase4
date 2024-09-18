@@ -257,7 +257,10 @@ icr3d(nx,nz) in-cloud ice crystal effective radius\
 cdnc3d(nx,nz) in-cloud droplet number concentration\ 
 
 ### "Cloud-top" calculation ### 
-This piece of Fortran code was used to calculate the Indirect3 ACI diagnostics.
+This piece of Fortran code was used to calculate the Phase 2 Indirect3 ACI diagnostics.
+We suggest using it again for the Phase 4 ACI baseline experiment.  Models that
+participated in Phase 2 Indirect3 probably already have an implementation of
+this that can be reused. 
 
 ``` fortran
 thres_cld = 0.001  
