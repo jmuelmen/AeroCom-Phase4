@@ -98,6 +98,7 @@ For evaluation with satellite data and for ERFaci decomposition (Gryspeerdt et a
 | name | long_name (CF if possible) | units | description |
 | ---- |  ---- |  ---- |  ---- |
 | od550aer  | atmosphere_optical_thickness_due_to_aerosol | 1 | Aerosol optical depth (@ 550 nm) |
+| aod550aer  | atmosphere_absorbinh optical_thickness_due_to_aerosol | 1 | Aerosol optical depth (@ 550 nm) |
 | angstrm | AOD_Angstrom_exponent | 1 | |
 | aerindex |aerosol_index  | 1  | od550aer*angstrm |
 | cdr | liquid_cloud-top_droplet_effective_radius | m  | Grid cell mean droplet effective radius at top of liquid water clouds |
@@ -130,10 +131,19 @@ For evaluation with satellite data and for ERFaci decomposition (Gryspeerdt et a
 | rsds | surface_downwelling_shortwave_flux_in_air | W m-2 | Surface SW downward flux (to estimate the model's 'true' surface albedo) |
 | ttop | air_temperature_at_cloud_top | K | Temperature at top of clouds, weighted by cloud cover |
 | lts | lower_tropospheric_stability | K | Difference in potential temperature between 700 hPa and 1000 hPa |
-| w500  | vertical_velocity_dpdt_at_500_hPa | hPa s-1 | |
+| u10  | zonal wind at 10 m height | m s-1 | provide lowest model level wind if 10 m is not diagnosed|
+| v10  | meridional wind at 10 m height | m s-1 | provide lowest model level wind if 10 m is not diagnosed|
+| u700  | zonal wind at 700 hPa | m s-1 | |
+| v700  | meridional wind at 700 hPa | m s-1 | |
+| u200  | zonal wind at 200 hPa | m s-1 | |
+| v200  | meridional wind at 200 hPa | m s-1 | |
+| w500  | vertical_velocity_dp/dt_at_500_hPa | hPa s-1 | |
+| w700  | vertical_velocity_dp/dt_at_700_hPa | hPa s-1 | |
+| lts   | potential temperature difference (theta at 700_hPa -- theta at 1000 hPa) | K | |
 | sprecip | stratiform_precipitation_rate	| kg m-2 s-1	| grid cell mean at surface |
 | autoconv | column_autoconversion_rate | kg m-2 s-1	| grid cell mean column total |
 | accretn | column_accretion_rate	| kg m-2 s-1	| grid cell mean column total |
+| wbf | Wegener--Bergeron--Findeisen rate	| kg m-2 s-1	| grid cell mean column total |
 
 ### Monthly-mean fields ###
 
