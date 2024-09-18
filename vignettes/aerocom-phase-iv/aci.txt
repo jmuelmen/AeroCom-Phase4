@@ -298,17 +298,13 @@ ENDDO ! loop over I
 <!--     time_step_len length of model time-step   -->
 <!--     lon(nx) longitude in degrees from 0 to 360    -->
 
- ==== Q/A ====
+ <!-- ==== Q/A ==== -->
 
- *    2D cloud fields (lwp, iwp, cdr, cdnc, ttop, cod): Please save them as grid-box mean values but DO NOT divide by the total (2D) cloud cover, which will be done in analysis after averaging in time and space. 
+ <!-- *    2D cloud fields (lwp, iwp, cdr, cdnc, ttop, cod): Please save them as grid-box mean values but DO NOT divide by the total (2D) cloud cover, which will be done in analysis after averaging in time and space.  -->
          
- *    The three months 1 October - 31 December 2005  are thought as spin-up, which can of course be longer. Please choose as overlap assumption the one you use in the radiation scheme.  
+ <!-- *    The three months 1 October - 31 December 2005  are thought as spin-up, which can of course be longer. Please choose as overlap assumption the one you use in the radiation scheme.   -->
     
- *    ATTENTION: clt(i) has to be initialized to 1 for random or maximum-random overlap assumptions in the "satellite simulator"  
+ <!-- *    ATTENTION: clt(i) has to be initialized to 1 for random or maximum-random overlap assumptions in the "satellite simulator"   -->
 
- *   CCN definition: Compute CCN using Kohler theory at 0.1 and 0.3 % supersaturation.
-         
-    
-=====
-
+ <!-- *   CCN definition: Compute CCN using Kohler theory at 0.1 and 0.3 % supersaturation. -->
  
