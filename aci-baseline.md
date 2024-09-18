@@ -205,6 +205,7 @@ Optional, but highly desirable for models with COSP
 | clmcalipso | cloud_area_fraction_in_atmosphere_layer | % | CALIPSO Middle Level Cloud Fraction  | | |
 | clhcalipso | cloud_area_fraction_in_atmosphere_layer | % | CALIPSO High Level Cloud Fraction  | | |
 
+*TBD: include Brandon Duran's/Casey Wall's monthly-mean COSP histogram ERFaci decomposition?*
 
 <!-- (b) 3D -->
 
