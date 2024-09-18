@@ -221,14 +221,15 @@ Optional, but highly desirable for models with COSP
 
 ## Sampling of cloud-top quantities ## 
 
-The idea is to use the cloud overlap assumption (maximum, random, or maximum-random) to estimate which part of the cloud in a   layer can be seen from above.
+The idea is to use the cloud overlap assumption (maximum, random, or
+maximum-random) to estimate which part of the cloud in a layer can be seen from
+above.
 
 Note: For the CCN, whether to sample it in the same way as CDNC, or use a similar approach (going from bottom up)    
 to sample it at cloud base depends on your parameterization of the activation.
 
-let i=1,2,...,nx be the index for the horizontal grid-points
-let k=1,2,...,nz be the index for the vertial levels, with 1 being the uppermost
-level, and nz the surface level 
+let $i=1,2,...,nx$ be the index for the horizontal grid-points \
+let $k=1,2,...,nz$ be the index for the vertial levels, with 1 being the uppermost level, and nz the surface level 
 
 ### Naming convention for the 3D input fields: ### 
 
@@ -244,6 +245,8 @@ icr3d(nx,nz) in-cloud ice crystal effective radius\
 cdnc3d(nx,nz) in-cloud droplet number concentration\ 
 
 ### "Cloud-top" calculation ### 
+This piece of Fortran code was used to calculate the Indirect3 ACI diagnostics.
+
 ``` fortran
 thres_cld = 0.001  
 thres_cod = 0.3  
