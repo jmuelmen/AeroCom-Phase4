@@ -76,7 +76,9 @@ wish had been included.
  *   All data is to be collected at the AeroCom server.
  *   Follow the aerocom data protocol (http://aerocom.met.no/protocol.html)
  *   Data in NetCDF format, one variable and year per file with CMOR variable names
- *   All data are 3-dimensional ``( lon x lat x time )``
+ *   All data are 3-dimensional, e.g., ``( lon x lat x time )``; if your model
+     uses other than a lon-lat coordinate system, please provide the data in
+     your model's native format (no post-processing remapping)
  *   Filename format is ``aerocom_<ModelName>_<ExperimentName>_<VariableName>_<VerticalCoordinateType>_<Period>_<Frequency>.nc``,\
     where ``<ModelName>`` can be chosen such that model name, model version and possibly the institution can be identified. No underscores (``_``) are allowed in ``<ModelName>``. Use (-) instead. Max 20 characters. \
     ``<ExperimentName>`` = ``all_2000``, ``all_1850``\
