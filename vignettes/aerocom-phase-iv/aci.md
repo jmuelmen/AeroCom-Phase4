@@ -10,11 +10,11 @@ This document is a **draft** meant to structure discussion at the Lille
 workshop.  **We are actively soliciting comments.**  You can provide comments in
 any of the following ways:
  
- 1. Contact <mailto:johannes.muelmenstaedt@pnnl.gov>
+ 1. Contact Johannes Mülmenstädt by email (<johannes.muelmenstaedt@pnnl.gov>)
  1. Leave a comment or edit the [google docs version of this
     document](https://drive.google.com/foo) _in suggestion mode_
  1. Interact directly with the [master version of this document on
-    GitHub](https://github.com/jmuelmen/AeroComP4/aci-baseline.md) (e.g., via a
+    GitHub](https://github.com/jmuelmen/AeroCom-Phase4/aci-baseline.md) (e.g., via a
     pull request containing your proposed changes)
 	
 Johannes Mü will collate comments and suggestions, and they will be discussed at the Lille
